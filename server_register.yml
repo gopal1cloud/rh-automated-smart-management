@@ -4,6 +4,6 @@
   vars:
     env: Dev
     activation_key: undef
-    sat_url: satellite.example.com
+    sat_url: "{{ lookup('env', 'FOREMAN_SERVER') }}"
   roles:
     - rhsm_register
