@@ -1,5 +1,5 @@
 ---
-- hosts: "env_{{ lifecycle_stage }}"
+- hosts: "{{ lifecycle_stage }}"
   become: yes
   vars:
     check_only: yes
