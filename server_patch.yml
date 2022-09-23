@@ -1,5 +1,5 @@
 ---
-- hosts: "env_{{ lifecycle_stage }}"
+- hosts: "{{ HOSTS is defined | ternary(HOSTS, PREFIX|default('')+'*') }}"
   become: yes
   vars:
     check_only: yes
